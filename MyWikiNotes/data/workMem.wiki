@@ -1,0 +1,140 @@
+﻿++ work Mem
+
+From: Yokoyama, Kenji (Sony Mobile)
+Sent: Monday, September 28, 2015 12:44 PM
+To: Yokoyama, Kenji (Sony Mobile); Su, Qingfu XA (EXT-Sony Mobile); Adachi, Hiroaki (Sony Mobile); Khan, Muhammad Mahfuzur Rahman X (Sony Mobile)
+Cc: Wang, Kai X (Sony Mobile); Futenma, Satoshi (Sony Mobile)
+Subject: RE: current tasks priority
+
+
+Hi Su-san, 
+
+ 
+
+I executed the below command to upload deb package to protected C2D server.
+
+ 
+
+$ repository addpackage app-phonebook_19.1.A.0.0-VOLATILE-PRE-M-KITAKAMI-150924-1916.deb -ru http://androidswrepo-protected.sonyericsson.net
+
+Package is in the repository: app-phonebook:19.1.A.0.0-VOLATILE-PRE-M-KITAKAMI-150924-1916:semc:all
+
+ 
+
+I saw the uploading succeeded by finding the deb package.
+
+http://androidswrepo-protected.sonyericsson.net/pool/semc/a/app-phonebook/
+
+ 
+
+Next step is updating variant spec. Please go ahead.
+
+ 
+
+BR
+
+Yokoyama
+
+ 
+
+From: Yokoyama, Kenji (Sony Mobile) 
+Sent: Monday, September 28, 2015 1:35 PM
+To: Su, Qingfu XA (EXT-Sony Mobile); Adachi, Hiroaki (Sony Mobile); Khan, Muhammad Mahfuzur Rahman X (Sony Mobile)
+Cc: Wang, Kai X (Sony Mobile); Futenma, Satoshi (Sony Mobile)
+Subject: RE: current tasks priority
+
+ 
+
+Hi Su-san,
+
+ 
+
+(1)   I’ll get back to you after I get how to upload it. Unitl then, please build other debian packages.
+
+(2)   local-contacts version was changed 17 to 18 when l cookie update. So, this time changing to 19.0.A.0.0 is good.
+
+Please also follow the past conventions for other components.
+
+(3)   Yes, runtime permission will be implemented by Tokyo side after you finishes the delivery.
+
+ 
+
+BR
+
+Yokoyama
+
+ 
+
+From: Su, Qingfu XA (EXT-Sony Mobile) 
+Sent: Monday, September 28, 2015 1:08 PM
+To: Yokoyama, Kenji (Sony Mobile); Adachi, Hiroaki (Sony Mobile); Khan, Muhammad Mahfuzur Rahman X (Sony Mobile)
+Cc: Wang, Kai X (Sony Mobile)
+Subject: RE: current tasks priority
+
+ 
+
+Hi Yokoyama-san,
+
+ 
+
+some questions now,
+
+(1) phonebook debian package is created at 
+
+http://android-ci-protected.sonyericsson.net/view/All/job/Application_official_build_with_Gradle/
+
+ 
+
+then how to upload it Protected C2D manually ?
+
+ 
+
+(2) Other phonebook components lick local-contacts, are using master branch now, what tags should be set ?
+
+Take local-contacts as example, currecnt tag is 18.0.A.0.8, so we should set new tag as 18.0.A.0.10 ?
+
+ 
+
+(3) Components like smart-search, local-contacts, video-calling-account etc, all need user to grant permissions manually,
+
+or there will be crashes.
+
+I think these permission issues need to be handled later, not in this delivery, right ?
+
+ 
+
+BRs
+
+Rick Su
+
+ 
+
+
+--------------------------------------------------------------------------------
+
+From: Yokoyama, Kenji (Sony Mobile)
+Sent: Monday, September 28, 2015 11:01 AM
+To: Yokoyama, Kenji (Sony Mobile); Su, Qingfu XA (EXT-Sony Mobile); Adachi, Hiroaki (Sony Mobile); Khan, Muhammad Mahfuzur Rahman X (Sony Mobile)
+Cc: Wang, Kai X (Sony Mobile)
+Subject: RE: current tasks priority
+
+Hi Su-san,
+
+ 
+
+You MUST finish the delivery of components for M bringup begin of w40(within today or tomorrow).
+
+If you have any blocker for the task, please let us know ASAP.
+
+ 
+
+Also please update the below page as latest status.
+
+http://confluence.jpto.sonyericsson.net/v1/display/SAA/SPB-Bringup-M
+
+ 
+
+BR
+
+Yokoyama
+

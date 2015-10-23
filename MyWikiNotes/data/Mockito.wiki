@@ -1,0 +1,5 @@
+﻿++ Mockito
+
+1. A mock object is a dummy implementation for an interface or a class in which you define the output of certain method calls.
+
+http://www.vogella.com/tutorials/Mockito/article.html

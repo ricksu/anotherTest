@@ -1,0 +1,6 @@
+﻿++ encoding
+
+1. Unicode 包含所有字符的二进制代码
+2. unicode有多种表示方法， utf-8是unicode的一种表示方法
+3. GB编码与unicode和utf-8无关
+4. unicode有big endian和little endian的区别， unicode文件开头的2个自己用来区分是big还是little.

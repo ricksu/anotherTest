@@ -1,0 +1,6 @@
+﻿++ Filter Results
++++ Distinct
++++ LIKE
+++++ operator '_', '%'
++++ ORDER BY
++++ LIMIT

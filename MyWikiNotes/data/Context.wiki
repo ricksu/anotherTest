@@ -1,0 +1,18 @@
+﻿++ Context
+
++++ What are contexts, when to use app context and activity context ?
+
+1.Context contains information of current application, including device screen infos, 
+themes etc.
+There is possibility that application and activity use different themes,
+so normally activity context should be used.
+
+2.The Application Context is typically used when singleton instances need to be created, such as a custom manager class that requires Context information to gain access to system services but gets reused across multiple Activities. Since retaining a reference to the Activity context would cause memory not to be reclaimed after it is no long running, it's important to use the Application Context instead.
+
+Memory leak example:
+Manager singleton class, use context to retain, activity will not be GCed if the activity's context is held by the manager class.
+
+
+Reference:
+https://guides.codepath.com/android/Using-Context#overview
+

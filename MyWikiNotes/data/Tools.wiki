@@ -1,0 +1,10 @@
+﻿++ Tools
+
++++Sysdump
+what info can be got from this file ?
+
+
+adb tools
+1. setprop name value
+2. getprop
+3. 

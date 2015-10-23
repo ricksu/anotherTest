@@ -1,0 +1,14 @@
+﻿++ SQL_Study
+
+++ RDB (Relation database)
++++ RDB is orgonized by tables
++++ SQL statements
+++++ create table
+++++ insert into
+++++ update
+++++ select
+++++ alter table
+++++ delete from
+
++++Advanced usage
+[FilterResults]

@@ -1,0 +1,12 @@
+﻿++ List View
+
+ListView
+ExpandableListView 
+
+Tip Adapters are not only used by ListView, but also by other views which extend AdapterView as, for example, Spinner, GridView, Gallery and StackView.
+
++++ Filtering and sorting
+how is filtering implemented in phonebook?
+
++++ Empty view
+android:id="@android:id/empty"

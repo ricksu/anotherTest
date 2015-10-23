@@ -1,0 +1,9 @@
+﻿++ My Wiki
+[SQL_Study]
+[BOOKS]
+[AndroidStudy]
+[Ideas]
+[Work]
+
+
+	* WikiSettings
