@@ -1,0 +1,93 @@
+﻿++ LOG REA Ding
+
+ * Bugreport structer
+  ------ VM TRACES JUST NOW 
+  
+  ----- pid 28997 at 2015-11-09 17:27:25 -----
+Cmd line: com.sonyericsson.android.socialphonebook
+
++++ explanation from web
+http://android-test-tw.blogspot.sg/2012/10/the-log-message-android-is-telling-you.html
+
+The log message Android is telling you - Bugreport
+
+Preface
+
+When someone get sick or get hurt and go to see a doctor, he must tell what's wrong to doctor. What if the Android device got some problems, how to know what wrong is on itself? Certainly, you need to look at the Log message that Android export.
+
+Where to start?
+
+There's a command called bugreport. You can get all information that Android/Linux can tell you. The command is either adb bugreport or adb shell bugreport. In case you try to use the command to get the bug report from Android emulator with JB, you'll get almost 68 kind of log message as follows.
+
+ UPTIME (uptime) 
+ MEMORY INFO (/proc/meminfo) 
+ CPU INFO (top -n 1 -d 1 -m 30 -t) 
+ PROCRANK (procrank) 
+ VIRTUAL MEMORY STATS (/proc/vmstat) 
+ VMALLOC INFO (/proc/vmallocinfo) 
+ SLAB INFO (/proc/slabinfo) 
+ ZONEINFO (/proc/zoneinfo) 
+ PAGETYPEINFO (/proc/pagetypeinfo) 
+ BUDDYINFO (/proc/buddyinfo) 
+ KERNEL WAKELOCKS (/proc/wakelocks) 
+ KERNEL CPUFREQ (/sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state) 
+ PROCESSES (ps -P) 
+ PROCESSES AND THREADS (ps -t -p -P) 
+ LIBRANK (librank) 
+ KERNEL LOG (dmesg) 
+ LIST OF OPEN FILES (/system/xbin/su root lsof) 
+ SMAPS OF ALL PROCESSES 
+ SHOW MAP 1 (/init) (/system/xbin/su root showmap 1) 
+ BLOCKED PROCESS WAIT-CHANNELS 
+ SYSTEM LOG (logcat -v threadtime -d *:v) 
+ EVENT LOG (logcat -b events -v threadtime -d *:v) 
+ RADIO LOG (logcat -b radio -v threadtime -d *:v) 
+ VM TRACES JUST NOW (/data/anr/traces.txt.bugreport: 2012-10-17 08:21:46) 
+ VM TRACES AT LAST ANR (/data/anr/traces.txt: 2012-10-17 08:16:11) 
+ NETWORK DEV INFO (/proc/net/dev) 
+ QTAGUID NETWORK INTERFACES INFO (/proc/net/xt_qtaguid/iface_stat_all) 
+ QTAGUID NETWORK INTERFACES INFO (xt) (/proc/net/xt_qtaguid/iface_stat_fmt) 
+ QTAGUID CTRL INFO (/proc/net/xt_qtaguid/ctrl) 
+ QTAGUID STATS INFO (/proc/net/xt_qtaguid/stats) 
+ NETWORK ROUTES (/proc/net/route) 
+ NETWORK ROUTES IPV6 (/proc/net/ipv6_route) 
+ LAST KMSG (/proc/last_kmsg) 
+ LAST PANIC CONSOLE (/data/dontpanic/apanic_console) 
+ LAST PANIC THREADS (/data/dontpanic/apanic_threads) 
+ SYSTEM SETTINGS (/system/xbin/su root sqlite3 /data/…
+ NETWORK INTERFACES (/system/xbin/su root netcfg) 
+ IP RULES (ip rule show) 
+ IP RULES v6 (ip -6 rule show) 
+ ROUTE TABLE 60 (ip route show table 60) 
+ ROUTE TABLE 61 v6 (ip -6 route show table 60) 
+ ROUTE TABLE 61 (ip route show table 61) 
+ ROUTE TABLE 61 v6 (ip -6 route show table 61) 
+ ARP CACHE (/proc/net/arp) 
+ IPTABLES (/system/xbin/su root iptables -L -nvx) 
+ IP6TABLES (/system/xbin/su root ip6tables -L -nvx) 
+ IPTABLE NAT (/system/xbin/su root iptables -t nat -L -nvx) 
+ IPTABLE RAW (/system/xbin/su root iptables -t raw -L -nvx) 
+ IP6TABLE RAW (/system/xbin/su root ip6tables -t raw -L -nvx) 
+ WIFI NETWORKS (/system/xbin/su root wpa_cli list_networks) 
+ SYSTEM PROPERTIES 
+ VOLD DUMP (vdc dump) 
+ SECURE CONTAINERS (vdc asec list) 
+ FILESYSTEMS & FREE SPACE (/system/xbin/su root df) 
+ PACKAGE SETTINGS (/system/xbin/su root cat /data/system/packages.xml) 
+ PACKAGE UID ERRORS (/data/system/uiderrors.txt: 2012-10-15 02:30:29) 
+ LAST RADIO LOG (parse_radio_log /proc/last_radio_log) 
+ BACKLIGHTS 
+ BINDER FAILED TRANSACTION LOG (/sys/kernel/debug/binder/failed_transaction_log) 
+ BINDER TRANSACTION LOG (/sys/kernel/debug/binder/transaction_log) 
+ BINDER TRANSACTIONS (/sys/kernel/debug/binder/transactions) 
+ BINDER STATS (/sys/kernel/debug/binder/stats) 
+ BINDER STATE (/sys/kernel/debug/binder/state) 
+ DUMP VENDOR RIL LOGS (/system/xbin/su root vril-dump) 
+ DUMPSYS (dumpsys) 
+ APP ACTIVITIES (dumpsys activity all) 
+ APP SERVICES (dumpsys activity service all) 
+ APP SERVICES (dumpsys activity provider all) 
+
+These messages include all the information on Android and Linux layer and tell you about various message about Activities Event, Memory, System state, Radio state, Network state and so on.
+
+Note, each Android phone has a modem function. Typically, the modem message contains the transition message between base station and modem chip insider Android phone. This kinda message may not be output from Linux kernel message. Hence, the bugreport function cannot output such a message as well.
