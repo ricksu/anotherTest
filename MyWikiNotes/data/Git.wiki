@@ -1,0 +1,5 @@
+﻿++ Git
+
+ * git merge
+   * git checkout branchA
+   * git merge branchB

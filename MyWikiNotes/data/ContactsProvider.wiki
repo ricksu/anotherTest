@@ -4,3 +4,10 @@
 New git on Mashmallow, used for calllog backup.
 
 +++ CallLogProvider.java
+
++++ Questions
+ * *How \ContactsProvider get called*
+     frameworks/base/core/java/android/content/IContentProvider.java
+     frameworks/base/core/java/android/content/ContentProviderNative.java
+     
+ * _Binder 与 \ContentProvider_

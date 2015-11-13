@@ -1,0 +1,9 @@
+﻿++ Nexts
++++ Long term
+1. Podcast software
+
++++ excercises
+custom scroll view
+
+[Mockito]
+

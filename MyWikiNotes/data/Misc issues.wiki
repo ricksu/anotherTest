@@ -1,0 +1,10 @@
+﻿++ Misc issues
+
+ * theme issue on Marshmallow
+ https://code.google.com/p/android-developer-preview/issues/detail?id=2353 .
+ https://commonsware.com/blog/2015/11/02/psa-android-6p0-theme.nodisplay-regression.html
+ 
+ * string resource
+  http://stackoverflow.com/questions/6526201/get-string-from-default-locale-using-string-in-specific-locale
+  
+ * 系统升级之前disable的broadcast receiver， 在升级之后会自动enable吗？

@@ -8,3 +8,12 @@ https://guides.codepath.com/android
 [encoding]
 [Mockito]
 [ListView]
+[Websites]
+[Tips]
+[Nexts]
+[Misc issues]
+[LOG Reading]
+
+
+
+

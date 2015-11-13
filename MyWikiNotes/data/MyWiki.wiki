@@ -1,9 +1,12 @@
 ﻿++ My Wiki
+[Study Plan]
 [SQL_Study]
 [BOOKS]
 [AndroidStudy]
 [Ideas]
 [Work]
+[Git]
+[Thinking]
 
 
 	* WikiSettings
